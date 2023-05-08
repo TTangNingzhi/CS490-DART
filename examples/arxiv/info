@@ -1,0 +1,3 @@
+1. Train/Valid -- Clean (1) Noisy (0) -- All Positive Interactions
+2. Test -- All Positive Interactions
+3. Negative Sampling -- num_ng == 1 (Same to Number of Positive Interactions)

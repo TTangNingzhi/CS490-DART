@@ -1,0 +1,18 @@
+# ==================== noisify training data labels ====================
+clean_targets = dataset.targets.copy()
+dataset.targets[train_dataset.indices] = noisify(
+    nb_classes=2, train_labels=dataset.targets[train_dataset.indices].reshape(-1, 1).astype(np.int32),
+    noise_type='symmetric', noise_rate=noise_rate)[0].reshape(-1).astype(np.float32)
+dataset.noise_mask[clean_targets != dataset.targets] = np.True_
+print(f"actual noise rate: {np.round(np.sum(clean_targets != dataset.targets) / len(train_dataset), 3)}\n"
+      f"# noise samples: {np.sum(dataset.noise_mask)}\n"
+      f"relabel: {relabel}")
+# ======================================================================
+
+MovieLens100K - Data Preprocessing
+(Create a brand new dataset)
+- Positive samples (1) -- 100K ratings with interaction
+- Negative samples (2) -- Randomly 100K (user, item) pairs without interaction
+    Whether or not make the # item distributions match positive samples?
+- Train/Val/Test split -- 80/10/10
+- Noisify/flip 2%, 5%, 10%, 20% labels of NEGATIVE samples

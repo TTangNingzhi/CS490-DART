@@ -1,0 +1,13 @@
+.idea
+
+*.npy
+*.csv
+*.dat
+*.rating
+*.negative
+*.data
+*.item
+*.base
+*.test
+*.xls
+*.pt
