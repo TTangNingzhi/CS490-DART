@@ -129,22 +129,7 @@ Ti, Tm, taum, r = 0, 20000, 0.04, 0
 ```
 
 It is worth noting that each experimental result may be adapted to different hyper-parameters to obtain the best
-results,
-depending on the specific dataset. Please refer to the Sensitivity Analysis section in the paper for details.
-
-## Citation
-
-If you find this code useful, please cite our paper:
-
-```
-@inproceedings{,
-  title={},
-  author={},
-  booktitle={},
-  year={},
-  organization={}
-}
-```
+results, depending on the specific dataset. Please refer to the Sensitivity Analysis section in the paper for details.
 
 ## Contact
 
